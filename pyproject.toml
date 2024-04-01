@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "novmuser-ai-be"
+version = "0.1.0"
+description = ""
+authors = ["mahao <peter8icestone@gmail.com>"]
+readme = "README.md"
+packages = [{include = "novmuser_ai_be", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.12"
+crewai = "^0.22.5"
+fastapi = "^0.110.0"
+uvicorn = "^0.29.0"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
